@@ -48,7 +48,8 @@ products.forEach((product) => {
             Added
           </div>
 
-          <button class="add-to-cart-button button-primary js-add-to-cart">
+          <button class="add-to-cart-button button-primary js-add-to-cart"
+          data-product-name="${product.name}">
             Add to Cart
           </button>
         </div> `;
@@ -61,6 +62,6 @@ document.querySelector('.js-products-grid').innerHTML = productsHTML
 document.querySelectorAll('.js-add-to-cart')
     .forEach((button) => {
 button.addEventListener('click', () => {
-    
+   console.log(button.dataset.productName); // gives us all the data attributes associated with the button.
     });
 });
