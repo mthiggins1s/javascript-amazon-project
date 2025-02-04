@@ -1,25 +1,4 @@
-const products = [{
-    image: 'images/products/athletic-cotton-socks-6-pairs.jpg', name: 'Black and Gray Athletic Cotton Socks',
-    rating: {
-        stars: 4.5,
-        count: 87
-    },
-    priceCents: 1090 // JS wants you to log currency in cents and to avoid decimals.
-},{
-    image: 'images/products/intermediate-composite-basketball.jpg', name: 'Intermediate Size Basketball',
-    rating: {
-        stars: 4,
-        count: 127
-    },
-    priceCents: 2095 // JS wants you to log currency in cents and to avoid decimals.
-},{
-    image: 'images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg', name: 'Adults Plain Cotton T-Shirt - 2 Pack',
-    rating: {
-        stars: 4.5,
-        count: 56
-    },
-    priceCents: 799 // JS wants you to log currency in cents and to avoid decimals.
-}]; // we use an array because its a list; a list for the products.
+ // we use an array because its a list; a list for the products.
 
 let productsHTML = '';
 
