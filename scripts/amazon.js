@@ -1,7 +1,7 @@
  // we use an array because its a list; a list for the products.
 // const cart = []; // cart has already been declared; in cart.js, we already declared cart.js.
 
-import {cart} from '../data/cart.js'; // this will take the variable "cart" out of cart.js, we use this filepath to locate the file.
+import {cart, addToCart} from '../data/cart.js'; // this will take the variable "cart" out of cart.js, we use this filepath to locate the file.
 import {products} from '../data/products.js'; 
 
 let productsHTML = '';
@@ -59,39 +59,20 @@ products.forEach((product) => {
         </div> `;
 });
 
-function addToCart(productId){
-  let matchingItem;
-
-  cart.forEach((item) => {
-      if(productId === item.productId) {
-          matchingItem = item;
-      }
-  });
-
-  if(matchingItem) {
-      matchingItem.quantity += 1;
-  } else {
-      cart.push({
-          productId: productId,
-          quantity: 1
-         });
-  }
-}
-
 console.log(productsHTML);
 
 function updateCartQuantity() {
   let cartQuantity = 0;
 
-  cart.forEach((item) => {
-    cartQuantity += item.quantity;
+  cart.forEach((cartItem) => {
+    cartQuantity += cartItem.quantity;
   });
 
   document.querySelector('.js-cart-quantity')
   .innerHTML = cartQuantity;
 }
 
-document.querySelector('.js-products-grid').innerHTML = productsHTML
+document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
 document.querySelectorAll('.js-add-to-cart')
     .forEach((button) => {
