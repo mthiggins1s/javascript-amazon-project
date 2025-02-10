@@ -1,6 +1,8 @@
  // we use an array because its a list; a list for the products.
 // const cart = []; // cart has already been declared; in cart.js, we already declared cart.js.
 
+import {cart} from '../data/cart.js'; // this will take the variable "cart" out of cart.js, we use this filepath to locate the file.
+
 let productsHTML = '';
 
 products.forEach((product) => {
