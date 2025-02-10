@@ -103,8 +103,20 @@
       </div>
     </div>
 
-    <script src="data/cart.js"></script>
+    <!-- <script src="data/cart.js"></script> -->
     <script src="data/products.js"></script>
-    <script src="scripts/amazon.js"></script>
+    <script type="module" src="scripts/amazon.js"></script>
   </body>
 </html>
+
+<!-- When we run the script tag for cart.js, it will run all the code inside cart.js. This code will create a cart variable and cause a naming conflict. By removing the script tag, we are no longer running the code and will no longer cause a naming conflict.
+ 
+How do you create a module?
+  > create a file and write the code inside the file.
+  > Don't load the file with <script>
+      > Any variable we create inside the file, will be contained inside the file.
+      
+How do you get a Variable Out of a File?
+  > Add a type="module" attribuite; lets the file get variables out of other files. Basically enables this feature.
+  > Export
+  > Import-->
