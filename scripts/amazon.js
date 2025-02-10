@@ -2,6 +2,7 @@
 // const cart = []; // cart has already been declared; in cart.js, we already declared cart.js.
 
 import {cart} from '../data/cart.js'; // this will take the variable "cart" out of cart.js, we use this filepath to locate the file.
+import {products} from '../data/products.js'; 
 
 let productsHTML = '';
 
